@@ -1,8 +1,14 @@
 # Crave.js — Sushi Storefront Template
 
-Tomodachi Sushi is a production-ready Crave.js storefront template built with Next.js 15, React 19, and Tailwind CSS. It ships with menu rendering, product detail dialogs, a mobile-friendly cart and checkout flow, and location-aware configuration so restaurants can launch online ordering experiences quickly on Vercel.
+> [!WARNING]
+> **Legacy visual reference only.** This repository pins the retired Storefront
+> SDK 1.x browser-key contract. Do not use it as a production starter, expose a
+> Crave API key in browser code, or use its one-click deployment flow. Build new
+> integrations from the current [Storefront SDK guide](https://docs.craveup.com/getting-started/storefront-sdk)
+> and treat this repository only as design and interaction reference material.
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/craveup/tomodachi-sushi-online-ordering-storefront-template&project-name=tomodachi-sushi-storefront&env=NEXT_PUBLIC_CRAVEUP_API_KEY,NEXT_PUBLIC_LOCATION_ID)
+Tomodachi Sushi is a Next.js 15, React 19, and Tailwind CSS example for
+studying menu, product-detail, cart, and restaurant marketing UI.
 
 ## Key Features
 
@@ -11,7 +17,7 @@ Tomodachi Sushi is a production-ready Crave.js storefront template built with Ne
 - **Cart & Recommendations** – Full cart sidebar with quantity controls, suggestions carousel, and checkout CTA.
 - **Dark & Light Themes** – Brandable palettes defined in CSS custom properties with instant theme toggling.
 - **Accessible Components** – Built on shadcn/ui + Radix primitives with Drawer/Dialog parity and keyboard support.
-- **Vercel Ready** – Zero-config deployment; includes `pnpm` scripts for dev, build, lint, and production start.
+- **Local Reference** – Includes `pnpm` scripts for local design and interaction study.
 
 ## Demo
 
@@ -56,14 +62,13 @@ Tomodachi Sushi is a production-ready Crave.js storefront template built with Ne
 
 ## Environment Variables
 
-Create a `.env.local` file with the following values from your CraveUp dashboard:
+Create a `.env.local` file only if you need a public location label while
+studying the UI. Do not add a Crave API key: this legacy application is not a
+supported live integration.
 
 ```bash
-NEXT_PUBLIC_CRAVEUP_API_KEY=pk_xxx
 NEXT_PUBLIC_LOCATION_ID=loc_xxx
 ```
-
-> Need keys? Email [hello@craveup.com](mailto:hello@craveup.com) for sandbox access.
 
 ## Scripts
 
@@ -78,9 +83,9 @@ NEXT_PUBLIC_LOCATION_ID=loc_xxx
 
 1. **Branding & Assets** – Replace imagery in `public/images/` with your restaurant photography.
 2. **Colors & Typography** – Update CSS variables in `src/app/globals.css` to match your brand system.
-3. **Menu Content** – Manage categories and items via the CraveUp dashboard; the template consumes live data via the storefront SDK.
+3. **Menu Content** – Study the legacy data flow locally; use the current Storefront SDK guide for a new live integration.
 4. **Components** – Extend UI patterns inside `src/components/crave-ui` and `src/app/components`.
-5. **Deploy** – Push to Git and import the repo into Vercel. Set the same environment variables in your Vercel project and deploy.
+5. **Production work** – Rebuild against the current Storefront API and SDK contract rather than deploying this legacy integration.
 
 ## Project Structure
 
@@ -103,12 +108,11 @@ NEXT_PUBLIC_LOCATION_ID=loc_xxx
 └── README.md
 ```
 
-## Deployment on Vercel
+## Deployment status
 
-1. Commit and push your changes.
-2. Go to [vercel.com/new](https://vercel.com/new) and import the repository.
-3. Add the CraveUp environment variables to the project settings.
-4. Click **Deploy** – Vercel builds the template and provides the live storefront URL.
+Do not deploy this legacy integration as a live ordering storefront. Reuse its
+visual ideas in a new application built against the current Storefront API and
+SDK contract instead.
 
 ## Support & Reference
 
